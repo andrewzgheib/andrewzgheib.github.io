@@ -1,0 +1,33 @@
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  margin: 0;
+}
+
+.text {
+  font-family: Calibri;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+
+p {
+  font-size: 30px;
+}
+
+ul {
+  list-style-type: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+  filter: invert(1);
+  margin: 15px;
+}
