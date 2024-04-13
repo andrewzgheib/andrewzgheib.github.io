@@ -1,0 +1,61 @@
+/* Global styles */
+body {
+  align-items: center;
+  animation: fadeIn 1.5s ease-in-out;
+  background-color: black;
+  display: flex;
+  height: 90vh;
+  justify-content: center;
+  margin: 0;
+}
+
+/* Text styles */
+.text {
+  color: white;
+  font-family: Calibri;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* List styles */
+ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+/* Image styles */
+img {
+  filter: invert(1);
+  height: 50px;
+  margin: 15px;
+  width: 50px;
+}
+
+/* Link styles */
+#repo-link {
+  color: #4493f8;
+  text-decoration: underline #4493f8;
+}
+
+#repo-link:hover {
+  color: #ffffff;
+  text-decoration-color: white;
+}
+
+#repo-link:active {
+  color: #4493f8;
+  text-decoration-color: #4493f8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
