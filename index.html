@@ -1,49 +1,268 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="Andrew Zgheib" />
   <meta name="description" content="Andrew Zgheib's Portfolio" />
   <link rel="stylesheet" href="styles.css" />
-  <title>Andrew Zgheib's Portfolio 👨🏻‍💻</title>
+  <link rel="stylesheet" href="mediaqueries.css" />
+  <link rel="icon" href="assets/">
+  <title>Andrew Zgheib - Portfolio 👨🏻‍💻</title>
 </head>
 
 <body>
-  <!-- Main Container -->
-  <div>
-    <!-- Header Section -->
-    <header class="text">
-      <h1>Hey there! 👋🏻</h1>
-      <p>
-        My portfolio is currently under construction 🚧 <br />
-        It'll be up and running soon! 🚀 <br />
-        <br />
-        Follow the progress through my
-        <a id="repo-link" href="https://github.com/andrewzgheib/Portfolio-Website">Portfolio-Website</a>
-        repository 📂
-      </p>
-    </header>
-    <!-- Footer Section -->
-    <footer>
-      <!-- Social Links -->
-      <ul>
-        <li>
-          <a href="https://www.linkedin.com/in/andrewzgheib">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-plain.svg"
-              alt="My LinkedIn" />
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/andrewzgheib">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
-              alt="My GitHub" />
-          </a>
-        </li>
+  <nav id="desktop-nav">
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-    </footer>
-  </div>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <ul>
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="profile-section">
+      <div class="text">
+        <p class="profile-section-p1">Hey there! I'm</p>
+        <h1 class="title">Andrew Zgheib</h1>
+        <p class="profile-section-p2">CS Student — Content Writer</p>
+      </div>
+      <div class="btn-container">
+        <a href="assets/Andrew Zgheib - CV.pdf" download="Andrew Zgheib - CV.pdf"><button class="btn btn-color">Download CV</button></a>
+        <a href="./#contact"><button class="btn btn-color">Get in touch</button></a>
+      </div>
+      <div id="socials-container">
+        <a href="https://linkedin.com/in/andrewzgheib"><img src="./assets/linkedin.png" alt="My LinkedIn" class="icon"/></a>
+        <a href="https://github.com/andrewzgheib"><img src="./assets/github.png" alt="My Github" class="icon"/></a>
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="./assets/education.png" alt="Education icon" class="icon" />
+            <h3>Education</h3>
+            <p>Bachelors Degree in Computer Science<br />University Saint-Joseph of Beirut</p>
+          </div>
+          <div class="details-container">
+            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+            <h3>Background</h3>
+            <p>3 CCNA Certifications<br/>2 articles published <a href="https://usj.edu.lb/blog/inst/articles-auteur.php?id=59">here</a></p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p>
+            As a Computer Science student, I have a strong passion for technology and its applications.
+            I am always eager to learn new things and I am constantly looking for ways to improve my skills.
+            I am a hardworking and dedicated individual who is always looking for new challenges.
+            I am also a content writer and I have published two articles on Campus-J's website.
+            I am always looking for new opportunities to learn and grow.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="experience">
+    <h1 class="title">Skills & Tools</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-subtitle">Skills</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>ASP .NET</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Pandas</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>PostgreSQL</h3>
+                <p>Advanced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>MatplotLib</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>DAX</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Seaborn</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-subtitle">Tools</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Navicat</h3>
+                <p>Advanced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>VS Code</h3>
+                <p>Advanced </p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Power BI</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Git</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Postman</h3>
+                <p>Beginner</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Docker</h3>
+                <p>Beginner</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <section id="projects">
+   <h1 class="title">My Projects</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
+          </div>
+          <h2 class="experience-subtitle project-title">Premier League Analysis</h2>
+          <div class="btn-container">
+            <a href="">
+              <button class="btn btn-color project-btn">Github</button>
+            </a>
+            <a href="">
+              <button class="btn btn-color project-btn">Live Demo</button>
+            </a>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/project-2.png" alt="Project 2" class="project-img" />
+          </div>
+          <h2 class="experience-subtitle project-title">Football PSQL Analysis</h2>
+          <div class="btn-container">
+            <a href="https://github.com/andrewzgheib">
+              <button class="btn btn-color project-btn">Github</button>
+            </a>
+            <a href="https://github.com/andrewzgheib">
+              <button class="btn btn-color project-btn">Live Demo</button>
+            </a>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/project-3.png" alt="Project 3" class="project-img" />
+          </div>
+          <h2 class="experience-subtitle project-title">HRMS Database Design</h2>
+          <div class="btn-container">
+            <a href="">
+              <button class="btn btn-color project-btn">Github</button>
+            </a>
+            <a href="">
+              <button class="btn btn-color project-btn">Live Demo</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <section id="contact">
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container" id="cic1">
+        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <p><a href="mailto:andrewzgheib2004@gmail.com">andrewzgheib2004@gmail.com</a></p>
+      </div>
+      <div class="contact-info-container" id="cic2">
+        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p><a href="https://www.linkedin.com/in/andrewzgheib">andrewzgheib</a></p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <p>You can find this Portfolio's source code <a href="https://github.com/andrewzgheib/portfolio-website">here</a>
+    </p>
+  </footer>
+  <script src="script.js"></script>
 </body>
-
 </html>
