@@ -1,13 +1,9 @@
 @media screen and (max-width: 1400px) {
-    #profile {
-      height: 83vh;
-      margin-bottom: 6rem;
-    }
     .about-containers {
       flex-wrap: wrap;
     }
   }
-  
+
   @media screen and (max-width: 1200px) {
     #desktop-nav {
       display: none;
@@ -39,20 +35,23 @@
       margin-top: 0;
     }
   }
-  
+
   @media screen and (max-width: 600px) {
     footer{
       height: 5vh;
     }
     footer nav{
-      display: none;  
-    } 
+      display: none;
+    }
     #contact {
       height: 40vh;
     }
     #profile {
-      height: 83vh;
-      margin-bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+      margin-bottom: 30vh;
     }
     article {
       font-size: 1rem;
@@ -125,5 +124,5 @@
     }
     #cic2{
       order: 1;
-    } 
+    }
   }

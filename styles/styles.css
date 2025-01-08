@@ -171,8 +171,6 @@ a:hover {
 /* SECTIONS */
 
 section {
-  padding-top: 4vh;
-  height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: -moz-fit-content;
@@ -199,7 +197,6 @@ section {
 .profile-section {
   align-self: center;
   text-align: center;
-  padding-bottom: 100px;
 }
 
 .profile-section p {
@@ -293,6 +290,8 @@ section {
 
 #about {
   position: relative;
+  margin-top: 1vh;
+  margin-bottom: 10vh;
 }
 
 .about-containers {
@@ -341,11 +340,11 @@ section {
   text-align: justify;
 }
 
-
 /* EXPERIENCE SECTION */
 
 #experience {
   position: relative;
+  margin-bottom: 10vh;
 }
 
 .experience-sub-title {
@@ -385,6 +384,7 @@ article .icon {
 
 #projects {
   position: relative;
+  margin-bottom: 10vh;
 }
 
 .color-container {
@@ -422,7 +422,6 @@ article .icon {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 70vh;
 }
 
 .contact-info-upper-container {
