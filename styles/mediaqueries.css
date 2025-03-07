@@ -4,7 +4,7 @@
     }
   }
 
-  @media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
     #desktop-nav {
       display: none;
     }
@@ -95,7 +95,7 @@
       justify-content: center;
     }
     .profile-section-p1 {
-      font-size: 34;
+      font-size: 34px;
     }
     .profile-section-p2 {
       font-size: 25px;
