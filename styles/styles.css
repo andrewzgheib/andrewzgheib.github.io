@@ -340,6 +340,13 @@ section {
   text-align: justify;
 }
 
+.text-container p {
+  font-size: large;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+
 /* EXPERIENCE SECTION */
 
 #experience {
