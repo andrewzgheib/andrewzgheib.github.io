@@ -33,7 +33,6 @@ img {
   padding: 1rem 10rem;
 }
 
-
 /* TRANSITION */
 
 a,
@@ -225,7 +224,6 @@ section {
   border-right: 2px solid white;
   font-size: 38px;
   white-space: nowrap;
-
   animation: typewriter 2s steps(25) 1s 1 normal both,
              blinkingCursor 400ms steps(44) infinite normal;
 }
@@ -345,7 +343,6 @@ section {
   line-height: 1.8;
   margin-bottom: 15px;
 }
-
 
 /* EXPERIENCE SECTION */
 
