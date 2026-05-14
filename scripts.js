@@ -13,7 +13,17 @@ const translations = {
   },
 };
 
-let currentLanguage = localStorage.getItem("language") || "en";
+function getBrowserLanguage() {
+  const saved = localStorage.getItem("language");
+  if (saved) {
+    return saved;
+  }
+
+  const browserLang = navigator.language || navigator.userLanguage;
+  return browserLang.startsWith("fr") ? "fr" : "en";
+}
+
+let currentLanguage = getBrowserLanguage();
 let isDarkMode = localStorage.getItem("darkMode") === "true";
 
 function initializeSettings() {
