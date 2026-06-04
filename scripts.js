@@ -143,6 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   initializeSettings();
+  initMasonry();
 });
 
 function updateThemeButton() {
@@ -180,4 +181,96 @@ function setLanguage(lang) {
   });
 
   updateLanguageButton();
+}
+
+/* ---------------------------------------------------------
+   True JS-driven masonry for #gallery .masonry-grid
+   Measures real rendered heights (after images load) and
+   places each card into whichever column is currently
+   shortest — this removes the leftover gaps that plain
+   CSS column-count masonry can leave behind.
+--------------------------------------------------------- */
+function getMasonryColumnCount() {
+  const width = window.innerWidth;
+  if (width <= 540) return 1;
+  if (width <= 900) return 2;
+  return 3;
+}
+
+function layoutMasonry(grid) {
+  const items = Array.from(grid.querySelectorAll(".masonry-item"));
+  if (items.length === 0) return;
+
+  const columnCount = getMasonryColumnCount();
+  const gapPx = parseFloat(getComputedStyle(document.documentElement)
+    .getPropertyValue("--spacing-md")) * 16 || 24; // fallback ~1.5rem
+  const gridWidth = grid.clientWidth;
+  const columnWidth = (gridWidth - gapPx * (columnCount - 1)) / columnCount;
+
+  const columnHeights = new Array(columnCount).fill(0);
+
+  items.forEach((item) => {
+    item.style.width = `${columnWidth}px`;
+
+    // Find the shortest column
+    let shortestCol = 0;
+    for (let i = 1; i < columnCount; i++) {
+      if (columnHeights[i] < columnHeights[shortestCol]) {
+        shortestCol = i;
+      }
+    }
+
+    const left = shortestCol * (columnWidth + gapPx);
+    const top = columnHeights[shortestCol];
+
+    item.style.left = `${left}px`;
+    item.style.top = `${top}px`;
+    item.classList.add("masonry-ready");
+
+    columnHeights[shortestCol] += item.offsetHeight + gapPx;
+  });
+
+  const tallestColumn = Math.max(...columnHeights);
+  grid.style.height = `${tallestColumn > 0 ? tallestColumn - gapPx : 0}px`;
+}
+
+function initMasonry() {
+  const grid = document.querySelector("#gallery .masonry-grid");
+  if (!grid) return;
+
+  const items = Array.from(grid.querySelectorAll(".masonry-item"));
+  const images = items.map((item) => item.querySelector("img")).filter(Boolean);
+
+  let loadedCount = 0;
+  const total = images.length;
+
+  function onAllLoaded() {
+    layoutMasonry(grid);
+  }
+
+  if (total === 0) {
+    onAllLoaded();
+  } else {
+    images.forEach((img) => {
+      if (img.complete) {
+        loadedCount++;
+        if (loadedCount === total) onAllLoaded();
+      } else {
+        img.addEventListener("load", () => {
+          loadedCount++;
+          if (loadedCount === total) onAllLoaded();
+        });
+        img.addEventListener("error", () => {
+          loadedCount++;
+          if (loadedCount === total) onAllLoaded();
+        });
+      }
+    });
+  }
+
+  let resizeTimeout;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => layoutMasonry(grid), 150);
+  });
 }

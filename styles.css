@@ -392,6 +392,7 @@ a:hover {
   margin-bottom: var(--spacing-sm);
   font-size: 16px;
   line-height: 1.7;
+  text-align: justify;
 }
 
 .project-tech {
@@ -412,7 +413,7 @@ a:hover {
 
 .project-links {
   display: flex;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-md);
   flex-wrap: wrap;
 }
 
@@ -427,19 +428,25 @@ a:hover {
 }
 
 .masonry-grid {
-  column-count: 3;
-  column-gap: var(--spacing-md);
+  position: relative;
   margin-top: var(--spacing-lg);
+  /* height is set dynamically by JS once items are measured and positioned */
 }
 
 .masonry-item {
-  break-inside: avoid;
-  margin-bottom: var(--spacing-md);
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
   border: 1px solid var(--border-color);
   border-radius: 8px;
   overflow: hidden;
-  position: relative;
-  transition: var(--transition);
+  transition: top 0.3s ease, left 0.3s ease, width 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.masonry-item.masonry-ready {
+  opacity: 1;
 }
 
 .masonry-item img {
@@ -500,12 +507,6 @@ a:hover {
 .footer-right a:hover {
   color: var(--accent-hover);
   border-bottom-color: var(--accent-color);
-}
-
-@media (max-width: 900px) {
-  .masonry-grid {
-    column-count: 2;
-  }
 }
 
 @media (max-width: 768px) {
@@ -594,12 +595,6 @@ a:hover {
   .footer {
     flex-direction: column;
     text-align: center;
-  }
-}
-
-@media (max-width: 540px) {
-  .masonry-grid {
-    column-count: 1;
   }
 }
 
