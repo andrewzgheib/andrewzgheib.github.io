@@ -69,16 +69,24 @@
 
     <div class="card" id="background">
       <div class="grid-2x2">
+
         <!--Education-->
         <div class="grid-item">
           <h3 data-en="Education" data-fr="Formation">Education</h3>
+          <div class="entry">
+            <div class="entry-title" data-en="Master of Science in Computer Science,<br/>Track: Computer Science for Data Science (ISD)"
+              data-fr="Master en Informatique,<br/>Parcours: Informatique pour la Science des Données (ISD)">Master of Science in Computer Science,<br/>Track: Computer Science for Data Science (ISD)</div>
+            <div class="entry-subtitle" data-en="Paris-Saclay University"
+              data-fr="Université Paris-Saclay">Paris-Saclay University</div>
+            <div class="entry-year">Sep. 2026 - Sep. 2027</div>
+          </div>
           <div class="entry">
             <div class="entry-title" data-en="Master in Systems and Networks,<br/>Concentration: Information Security"
               data-fr="Master en Systèmes et Réseaux,<br/>Spécialisation: Sécurité de l'Information">Master in Systems
               and Networks, Concentration: Information Security</div>
             <div class="entry-subtitle" data-en="Saint Joseph University of Beirut"
               data-fr="Université Saint-Joseph de Beyrouth">Saint Joseph University of Beirut</div>
-            <div class="entry-year">Sep. 2025 - May 2027</div>
+            <div class="entry-year">Sep. 2025 - May 2026</div>
           </div>
           <div class="entry">
             <div class="entry-title" data-en="Bachelor of Science in Computer Science"
@@ -95,7 +103,7 @@
               data-fr="Analyste de Recherche en Cybersécurité">Cybersecurity Research Analyst</div>
             <div class="entry-subtitle" data-en="Saint Joseph University of Beirut"
               data-fr="Université Saint-Joseph de Beyrouth">Saint Joseph University of Beirut</div>
-            <div class="entry-year">Jan. 2026 - Present</div>
+            <div class="entry-year">Feb. 2026 - Present</div>
           </div>
           <div class="entry">
             <div class="entry-title" data-en="Software Developer" data-fr="Développeur Logiciel">Software Developer
@@ -176,33 +184,66 @@
               2026</span>
           </div>
           <p class="project-description"
-            data-en="Designing and implementing a testbed to simulate multi-layer DoS attacks and assess Suricata's detection accuracy and blocking effectiveness under varying traffic loads."
-            data-fr="Conception et mise en place d'un banc de test pour simuler des attaques DoS multicouches et d'évaluer la précision de détection et l'efficacité de blocage de Suricata sous différentes charges de trafic.">
-            Designing and implementing a testbed to simulate multi-layer DoS attacks and assess Suricata's detection
-            accuracy and blocking effectiveness under varying traffic loads.</p>
+            data-en="Denial of Service (DoS) attacks are a significant threat to network security, targeting the availability of services by overwhelming them with traffic.
+            One of the main tools used to detect and mitigate such attacks are Intrusion Detection Systems (IDS).
+            Suricata is an open-source IDS that is designed to handle high volumes of traffic thanks to its multi-threaded architecture, and provide real-time detection of DoS attacks.
+            However, IDS solutions like Suricata have their limitations in terms of detecting complex patterns and combinations of DoS attacks.
+            This paper studies the performance of Suricata under multi-layer DoS attacks, while proposing remediations on top of Suricata."
+            data-fr="Les attaques par déni de service (DoS) constituent une menace importante pour la sécurité des réseaux ; elles visent à compromettre la disponibilité des services en les saturant de trafic.
+            Les systèmes de détection d'intrusion (IDS) constituent l'un des principaux outils utilisés pour détecter et contrer ce type d'attaques.
+            Suricata est un système de détection d'intrusion (IDS) open source conçu pour gérer des volumes de trafic élevés grâce à son architecture multithread, et pour détecter en temps réel les attaques par déni de service (DoS).
+            Cependant, les solutions IDS telles que Suricata présentent des limites en matière de détection des schémas complexes et des combinaisons d'attaques DoS.
+            Cet article examine les performances de Suricata face à des attaques par déni de service multicouches, tout en proposant des mesures correctives à mettre en œuvre sur Suricata.">
+            Denial of Service (DoS) attacks are a significant threat to network security, targeting the availability of services by overwhelming them with traffic.
+            One of the main tools used to detect and mitigate such attacks are Intrusion Detection Systems (IDS).
+            Suricata is an open-source IDS that is designed to handle high volumes of traffic thanks to its multi-threaded architecture, and provide real-time detection of DoS attacks.
+            However, IDS solutions like Suricata have their limitations in terms of detecting complex patterns and combinations of DoS attacks.
+            This paper studies the performance of Suricata under multi-layer DoS attacks, while proposing remediations on top of Suricata.
+          </p>
           <p class="project-contributors" data-en="Contributors: Michaela El Rif, Andrew Zgheib"
             data-fr="Contributeurs : Michaela El Rif, Andrew Zgheib">Contributors: Michaela El Rif, Andrew Zgheib</p>
           <div class="project-tech">
             <span class="tech-tag">Linux</span>
-            <span class="tech-tag">Wireshark</span>
+            <span class="tech-tag">Suricata</span>
             <span class="tech-tag">EveBox</span>
+          </div>
+          <br>
+          <div class="project-links">
+            <a href="assets/papers/suricata-impact-assessment.pdf" target="_blank" class="project-link"
+              data-en="Paper" data-fr="Article">Paper</a>
+            <a href="assets/slides/suricata-impact-assessment.pdf" target="_blank" class="project-link"
+              data-en="Slides" data-fr="Diapositives">Slides</a>
           </div>
         </div>
         <div class="project-item">
           <div class="project-header">
-            <h3 class="project-title" data-en="Multi-Source RAG Chatbot" data-fr="Chatbot RAG Multi-Sources">
-              Multi-Source RAG Chatbot</h3>
+            <h3 class="project-title" data-en="RAG Security Analysis" data-fr="Chatbot RAG Multi-Sources">
+              RAG Security Analysis</h3>
             <span class="project-year" data-en="Apr. 2026 - May 2026" data-fr="Avr. 2026 - Mai 2026">Apr. 2026 - May
               2026</span>
           </div>
           <p class="project-description"
-            data-en="Developing a RAG system using LlamaIndex to perform semantic search over documents and websites."
-            data-fr="Développement d'un système RAG en utilisant LlamaIndex pour effectuer des recherches sémantiques dans des documents et sur des sites web.">
-            Developing a RAG system using LlamaIndex to perform semantic search over documents and websites.</p>
-          <p class="project-contributors" data-en="Contributors: Andrew Zgheib" data-fr="Contributeurs : Andrew Zgheib">
-            Contributors: Andrew Zgheib</p>
+            data-en="Retrieval-Augmented Generation (RAG) systems combine a dense vector search over a knowledge corpus with a large language model (LLM) to produce grounded, context-aware responses.
+            While RAG does present some advantages and efficiency in terms of performance, it also introduces a new, richer attack surface that spans the retrieval pipeline, the embedding model, the vector database, and the generative model itself.
+            This project builds a fully functional RAG system over the personal websites of the two authors, as well as an optional local Obsidian vault, and then systematically exploits it using all ten vulnerability categories defined in the OWASP Top 10 for LLM Applications 2025."
+            data-fr="Les systèmes de génération augmentée par la recherche (RAG) combinent une recherche vectorielle dense sur un corpus de connaissances avec un grand modèle linguistique (LLM) afin de produire des réponses ancrées dans le contexte.
+            Même si le RAG présente certains avantages et une certaine efficacité en termes de performances, il introduit également une nouvelle surface d'attaque plus vaste qui s'étend sur l'ensemble du pipeline de recherche, le modèle d'encodage, la base de données vectorielle et le modèle génératif lui-même.
+            Ce projet met en place un système RAG entièrement fonctionnel sur les sites web personnels des deux auteurs, ainsi que sur un coffre-fort Obsidian local, puis l'exploite systématiquement en utilisant les dix catégories de vulnérabilités définies dans OWASP Top 10 pour les applications LLM 2025.">
+            Retrieval-Augmented Generation (RAG) systems combine a dense vector search over a knowledge corpus with a large language model (LLM) to produce grounded, context-aware responses.
+            While RAG does present some advantages and efficiency in terms of performance, it also introduces a new, richer attack surface that spans the retrieval pipeline, the embedding model, the vector database, and the generative model itself.
+            This project builds a fully functional RAG system over the personal websites of the two authors, as well as an optional local Obsidian vault, and then systematically exploits it using all ten vulnerability categories defined in the OWASP Top 10 for LLM Applications 2025.
+          </p>
+          <p class="project-contributors" data-en="Contributors: Michaela El Rif, Andrew Zgheib" data-fr="Contributeurs : Michaela El Rif, Andrew Zgheib">
+            Contributors: Michaela El Rif, Andrew Zgheib</p>
           <div class="project-tech">
             <span class="tech-tag">Python</span>
+          </div>
+          <br>
+          <div class="project-links">
+            <a href="https://github.com/andrewzgheib/rag-security-analysis" target="_blank" class="project-link"
+              data-en="GitHub" data-fr="GitHub">GitHub</a>
+            <a href="assets/papers/rag-security-analysis.pdf" target="_blank" class="project-link"
+              data-en="Paper" data-fr="Article">Paper</a>
           </div>
         </div>
         <div class="project-item">
@@ -213,10 +254,19 @@
               2025</span>
           </div>
           <p class="project-description"
-            data-en="Deployed a production-grade T-Pot honeypot on Azure, capturing 116,000+ real-world attacks; configured Cowrie honeypot with PostgreSQL and VirusTotal integration, and developed a custom SSH honeypot."
-            data-fr="Déploiement du honeypot T-Pot de niveau production sur Azure, permettant de capturer plus de 116 000 attaques réelles ; configuration du honeypot Cowrie avec intégration PostgreSQL et VirusTotal, et développement d'un honeypot SSH personnalisé.">
-            Deployed a production-grade T-Pot honeypot on Azure, capturing 116,000+ real-world attacks; configured
-            Cowrie honeypot with PostgreSQL and VirusTotal integration, and developed a custom SSH honeypot.</p>
+            data-en="This project implements and analyzes three honeypot environments to capture and study real-world malicious behavior.
+            Deployments include (1) T-Pot on Microsoft Azure for multi-sensor, containerized high-interaction logging,
+            (2) Cowrie running on VMware as an SSH/Telnet low-to-medium interaction honeypot,
+            and (3) a custom Python-based honeypot emulating SSH, FTP, and HTTP on a separate VMware virtual machine."
+            data-fr="Ce projet met en œuvre et analyse trois environnements de honeypot afin de détecter et d'étudier des comportements malveillants réels.
+            Les déploiements comprennent (1) T-Pot sur Microsoft Azure pour la journalisation multi-capteurs, conteneurisée et à forte interaction,
+            (2) Cowrie fonctionnant sur VMware en tant que honeypot SSH/Telnet à interaction faible à moyenne,
+            et (3) un honeypot personnalisé basé sur Python émulant SSH, FTP et HTTP sur une machine virtuelle VMware distincte.">
+            This project implements and analyzes three honeypot environments to capture and study real-world malicious behavior.
+            Deployments include (1) T-Pot on Microsoft Azure for multi-sensor, containerized high-interaction logging,
+            (2) Cowrie running on VMware as an SSH/Telnet low-to-medium interaction honeypot,
+            and (3) a custom Python-based honeypot emulating SSH, FTP, and HTTP on a separate VMware virtual machine.
+          </p>
           <p class="project-contributors" data-en="Contributors: Andrew Zgheib" data-fr="Contributeurs : Andrew Zgheib">
             Contributors: Andrew Zgheib</p>
           <div class="project-tech">
@@ -227,7 +277,9 @@
           <br>
           <div class="project-links">
             <a href="https://github.com/andrewzgheib/tiny-ssh-honeypot" target="_blank" class="project-link"
-              data-en="GitHub" data-fr="GitHub">GitHub</a>
+              data-en="GitHub" data-fr="GitHub">SSH Honeypot GitHub</a>
+            <a href="assets/papers/honeypot-deployments.pdf" target="_blank" class="project-link"
+              data-en="Paper" data-fr="Article">Paper</a>
           </div>
         </div>
       </div>
@@ -259,7 +311,7 @@
       <div class="masonry-grid">
 
         <div class="masonry-item">
-          <img src="images/campusj.jpeg" alt="Best English Article 2024, Campus-J" loading="lazy">
+          <img src="assets/images/campusj.jpeg" alt="Best English Article 2024, Campus-J" loading="lazy">
           <div class="masonry-caption"
             data-en="Best English Article 2024, <a href='https://instagram.com/campusj.usj/' target='_blank'>Campus-J</a>"
             data-fr="Meilleur Article Anglais 2024, <a href='https://instagram.com/campusj.usj/' target='_blank'>Campus-J</a>">
@@ -268,7 +320,7 @@
         </div>
 
         <div class="masonry-item">
-          <img src="images/byblos.jpeg" alt="Lady of Deliverance Church, Byblos" loading="lazy">
+          <img src="assets/images/byblos.jpeg" alt="Lady of Deliverance Church, Byblos" loading="lazy">
           <div class="masonry-caption"
             data-en="Lady of Deliverance Church, <a href='https://en.wikipedia.org/wiki/Byblos' target='_blank'>Byblos</a>"
             data-fr="Église Notre-Dame de la Délivrance, <a href='https://fr.wikipedia.org/wiki/Byblos' target='_blank'>Byblos</a>">
@@ -277,7 +329,7 @@
         </div>
 
         <div class="masonry-item">
-          <img src="images/csrp25.jpg" alt="Computer Science Rally Paper 2025" loading="lazy">
+          <img src="assets/images/csrp25.jpg" alt="Computer Science Rally Paper 2025" loading="lazy">
           <div class="masonry-caption"
             data-en="The first edition of the <a href='https://cs-club-usj.github.io/blog/csrp25-recap' target='_blank'>Computer Science Rally Paper</a> at Saint Joseph University of Beirut"
             data-fr="La première édition du <a href='https://cs-club-usj.github.io/blog/csrp25-recap' target='_blank'>Rallye Informatique</a> à l'Université Saint-Joseph de Beyrouth">
@@ -287,7 +339,7 @@
         </div>
 
         <div class="masonry-item">
-          <img src="images/football.jpeg" alt="Football match" loading="lazy">
+          <img src="assets/images/football.jpeg" alt="Football match" loading="lazy">
           <div class="masonry-caption" data-en="In action during a competitive football match"
             data-fr="En pleine action lors d’un match de football compétitif">
             In action during a competitive football match
@@ -295,7 +347,7 @@
         </div>
 
         <div class="masonry-item">
-          <img src="images/beitbeirut.jpeg" alt="Beit Beirut museum" loading="lazy">
+          <img src="assets/images/beitbeirut.jpeg" alt="Beit Beirut museum" loading="lazy">
           <div class="masonry-caption"
             data-en="A visit to the <a href='https://beitbeirut.org/english' target='_blank'>Beit Beirut</a> museum"
             data-fr="Une visite au musée <a href='https://beitbeirut.org/' target='_blank'>Beit Beyrouth</a>">
